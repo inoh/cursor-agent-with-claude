@@ -28,6 +28,8 @@ $ npm install
 
 ## 実行方法
 
+### ローカル環境
+
 ```bash
 # 開発モード
 $ npm run start:dev
@@ -35,6 +37,19 @@ $ npm run start:dev
 # プロダクションビルド
 $ npm run build
 $ npm run start:prod
+```
+
+### Docker環境
+
+```bash
+# Dockerを使用して開発モードで起動
+$ docker-compose up
+
+# バックグラウンドで起動
+$ docker-compose up -d
+
+# コンテナを停止
+$ docker-compose down
 ```
 
 ## APIドキュメント
