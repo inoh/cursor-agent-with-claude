@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      target: development
+    container_name: nestjs-fastify-api
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - ${PORT:-3000}:${PORT:-3000}
+    command: npm run start:dev
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped 

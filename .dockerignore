@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+dist
+.git
+.env
+.dockerignore
+.prettierrc
+README.md
+.vscode
+coverage
+.github
+.husky
+Dockerfile
+docker-compose*.yml 
