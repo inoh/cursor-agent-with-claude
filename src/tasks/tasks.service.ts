@@ -24,6 +24,7 @@ export class TasksService {
     const newTask: TaskDto = {
       id: Date.now().toString(),
       ...createTaskDto,
+      description: createTaskDto.description || '',
       completed: false,
       createdAt: new Date(),
       updatedAt: new Date(),

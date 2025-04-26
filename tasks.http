@@ -1,0 +1,45 @@
+###
+# @name 全タスクの取得
+GET http://localhost:3000/api/tasks
+Accept: application/json
+
+###
+# @name 特定のタスクの取得
+# @prompt id タスクのID
+GET http://localhost:3000/api/tasks/{{id}}
+Accept: application/json
+
+###
+# @name タスクの作成
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "プロジェクト計画を作成する",
+  "description": "次のスプリントのためのプロジェクト計画書を作成する"
+}
+
+###
+# @name タスクの更新
+# @prompt id 更新するタスクのID
+PUT http://localhost:3000/api/tasks/{{id}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "プロジェクト計画を更新する",
+  "description": "次のスプリントのためのプロジェクト計画書を更新する",
+  "completed": true
+}
+
+###
+# @name タスクの削除
+# @prompt id 削除するタスクのID
+DELETE http://localhost:3000/api/tasks/{{id}}
+Accept: application/json
+
+###
+# @name Swagger UI
+GET http://localhost:3000/docs
+Accept: application/json 
